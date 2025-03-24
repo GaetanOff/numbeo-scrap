@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-def clean_prices(input_csv="../data/villes_produits_prix_raw.csv",
-                 output_csv="../data/villes_produits_prix_clean.csv"):
+def clean_prices(input_csv="data/villes_produits_prix_raw.csv",
+                 output_csv="data/cleaned/villes_produits_prix_clean.csv"):
     # Charger les données raw
     df = pd.read_csv(input_csv)
 
@@ -31,8 +31,8 @@ def clean_prices(input_csv="../data/villes_produits_prix_raw.csv",
     return df
 
 
-def clean_quality(input_csv="../data/villes_qualite_vie_raw.csv",
-                  output_csv="../data/villes_qualite_vie_clean.csv"):
+def clean_quality(input_csv="data/villes_qualite_vie_raw.csv",
+                  output_csv="data/cleaned/villes_qualite_vie_clean.csv"):
     # Charger les données raw
     df = pd.read_csv(input_csv)
 
@@ -83,9 +83,9 @@ def clean_quality(input_csv="../data/villes_qualite_vie_raw.csv",
     return df
 
 
-def merge_clean_data(prices_csv="../data/villes_produits_prix_clean.csv",
-                     quality_csv="../data/villes_qualite_vie_clean.csv",
-                     output_csv="../data/villes_final_ml.csv"):
+def merge_clean_data(prices_csv="data/cleaned/villes_produits_prix_clean.csv",
+                     quality_csv="data/cleaned/villes_qualite_vie_clean.csv",
+                     output_csv="data/cleaned/villes_final_ml.csv"):
     # Charger les données nettoyées
     df_prices = pd.read_csv(prices_csv)
     df_quality = pd.read_csv(quality_csv)
